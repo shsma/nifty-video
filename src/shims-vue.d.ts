@@ -1,6 +1,5 @@
 declare module '*.vue' {
-    // eslint-disable-next-line prettier/prettier
-    import type { DefineComponent } from 'vue'
-    const component: DefineComponent<{}, {}, any>
-    export default component
+    import { ComponentOptions } from 'vue';
+    const component: ComponentOptions;
+    export default component;
 }
