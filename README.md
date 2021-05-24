@@ -1,4 +1,4 @@
-# netflix-vue3
+# netflix-vue3-typescript
 
 ## Project setup
 ```
@@ -27,4 +27,3 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
-# netflix-vue3-typescript
