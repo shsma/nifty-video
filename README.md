@@ -1,4 +1,5 @@
-# netflix-vue3
+# vue-typescript-decorators
+The purpose of this project is to demostrate how to use Typescript and Decorators in a Vue/Vuex project.
 
 ## Project setup
 ```
@@ -15,16 +16,7 @@ npm run serve
 npm run build
 ```
 
-### Run your unit tests
-```
-npm run test:unit
-```
-
 ### Lints and fixes files
 ```
 npm run lint
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
-# netflix-vue3-typescript
