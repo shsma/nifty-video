@@ -1,6 +1,7 @@
 import { createStore } from 'vuex';
-import CounterModule from './counter.module';
-import MovieModule from './movie.module';
+
+import CounterModule from '@/store/counter.module';
+import MovieModule from '@/store/movie.module';
 
 const store = createStore({});
 
