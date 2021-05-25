@@ -13,7 +13,6 @@ class Bootstrap {
     }
 
     public start(): void {
-        console.log('here');
         this.container.bindDependencies();
         Bootstrap.mount();
     }
