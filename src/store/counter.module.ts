@@ -1,16 +1,14 @@
 import { VuexModule, Module, Mutation, Action } from 'vuex-class-modules';
 
 @Module({ generateMutationSetters: true })
-export default class Counter extends VuexModule {
+export default class CounterModule extends VuexModule {
     // state
     private _count = 0;
 
-    // getters
     get count(): number {
         return this._count;
     }
 
-    // mutations
     @Mutation
     public addToCount(): void {
         this._count++;
@@ -23,7 +21,6 @@ export default class Counter extends VuexModule {
         }
     }
 
-    // actions
     @Action
     public async add(): Promise<void> {
         this.addToCount();
