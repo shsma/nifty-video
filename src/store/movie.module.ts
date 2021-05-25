@@ -9,7 +9,11 @@ export default class MovieModule extends VuexModule {
     @Inject()
     private gateway!: MovieGateway;
 
-    public movieList: [] | null = null;
+    public _movieList: [] | null = null;
+
+    get movieList(): [] | null {
+        return this._movieList;
+    }
 
     @Action
     public async fetchMovies(): Promise<void> {
@@ -23,6 +27,6 @@ export default class MovieModule extends VuexModule {
 
     @Mutation
     public setMovieList(movieList: []): void {
-        this.movieList = movieList;
+        this._movieList = movieList;
     }
 }
