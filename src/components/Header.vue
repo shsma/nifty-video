@@ -1,8 +1,7 @@
 <template>
-    <div class="header">
-        <div class="showcase">
+    <header class="header">
             <div class="showcase-top">
-                <img src="../assets/Logo.png">
+                <img src="../assets/header-title.png" alt="header"/>
                 <a href="#" class="btn btn-rounded">Sign in</a>
             </div>
             <div class="showcase-content">
@@ -12,17 +11,11 @@
                     Watch free For 30 Days <i class="fas fa-chevron-right btn-icon"></i>
                 </a>
             </div>
-        </div>
-    </div>
+    </header>
 </template>
 
-<script lang="ts">
-import { Options, Vue } from 'vue-class-component';
-
-@Options({
-    name: 'Header'
-})
-export default class Header extends Vue {
-    msg!: string;
-}
+<script>
+export default {
+    name: 'header'
+};
 </script>
