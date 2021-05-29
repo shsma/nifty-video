@@ -37,7 +37,5 @@ import { Options, Vue } from 'vue-class-component';
 @Options({
     name: 'Footer'
 })
-export default class Footer extends Vue {
-    msg!: string;
-}
+export default class Footer extends Vue {}
 </script>
