@@ -19,7 +19,7 @@
 import { Options, Vue } from 'vue-class-component';
 
 @Options({
-    name: 'Header'
+    name: 'NvHeader'
 })
-export default class Header extends Vue {}
+export default class NvHeader extends Vue {}
 </script>

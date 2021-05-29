@@ -35,7 +35,7 @@
 import { Options, Vue } from 'vue-class-component';
 
 @Options({
-    name: 'Footer'
+    name: 'NvFooter'
 })
-export default class Footer extends Vue {}
+export default class NvFooter extends Vue {}
 </script>
