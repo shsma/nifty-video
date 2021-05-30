@@ -38,3 +38,26 @@ import { Options, Vue } from 'vue-class-component';
 })
 export default class NvHeader extends Vue {}
 </script>
+
+<style>
+.header {
+    width: 100%;
+    height: 93vh;
+    position: relative;
+    background-size: cover cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.showcase::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.6);
+    box-shadow: inset 120px 100px 250px #000000;
+}
+</style>
