@@ -14,7 +14,7 @@ import Counter from '@/components/Counter.vue';
 import { namespace } from 'vuex-class';
 import { Movie } from '@/entities/external/movie';
 
-const counterModule = namespace('MovieModule');
+const movieModule = namespace('MovieModule');
 
 @Options({
     name: 'Home',
@@ -23,10 +23,10 @@ const counterModule = namespace('MovieModule');
     }
 })
 export default class Home extends Vue {
-    @counterModule.Getter('movieList')
+    @movieModule.Getter('movieList')
     private movieList!: () => [Movie];
 
-    @counterModule.Action('fetchMovies')
+    @movieModule.Action('fetchMovies')
     private fetchMovies!: () => Promise<void>;
 }
 </script>
