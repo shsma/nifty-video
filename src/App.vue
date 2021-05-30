@@ -1,10 +1,19 @@
 <template>
-    <div id="nav">
-        <router-link to="/">Home</router-link> |
-        <router-link to="/about">About</router-link>
-    </div>
-    <router-view />
+    <nv-layout />
 </template>
+
+<script lang="ts">
+import { Options, Vue } from 'vue-class-component';
+import NvLayout from '@/components/layouts/NvLayout.vue';
+
+@Options({
+    name: 'App',
+    components: {
+        NvLayout
+    }
+})
+export default class App extends Vue {}
+</script>
 
 <style>
 #app {

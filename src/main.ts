@@ -4,6 +4,7 @@ import App from '@/App.vue';
 import router from '@/router';
 import store from '@/store/store';
 import Container from '@/container';
+import '@/assets/scss/tailwind.css';
 
 class Bootstrap {
     public readonly container: Container;
