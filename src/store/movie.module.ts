@@ -21,7 +21,7 @@ export default class MovieModule extends VuexModule {
     @Inject(SERVICE_IDENTIFIER.MOVIE_GATEWAY)
     private gateway!: MovieGateway;
 
-    private _page = 1;
+    private _page = Math.floor(Math.random() * 1000);
     private _movieList: [Movie] | null = null;
     private _movie: Movie | null = null;
 
@@ -52,12 +52,19 @@ export default class MovieModule extends VuexModule {
         this._page = page;
     }
 
+    @Mutation
+    public randomizePage(): void {
+        this._page = Math.floor(Math.random() * 1000);
+    }
+
     @Action
     public async fetchMovies(): Promise<void> {
         try {
-            console.log(this.gateway);
-            console.log('here 1');
-            const response = await this.gateway.list(this.page);
+            let response: any;
+            do {
+                this.randomizePage();
+                response = await this.gateway.list(this.page);
+            } while (response.data.items.length < 30);
             this.setMovieList(response.data.items);
         } catch (error) {
             console.error(error);
