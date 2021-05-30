@@ -1,6 +1,6 @@
 const SERVICE_IDENTIFIER = {
     CONTAINER: Symbol('Container'),
-    HTTP_GATEWAY: Symbol('HttpGateway'),
+    HTTP_CLIENT: Symbol('HttpGClient'),
     MOVIE_GATEWAY: Symbol('MovieGateway'),
     CUSTOMER_GATEWAY: Symbol('CustomerGateway')
 };

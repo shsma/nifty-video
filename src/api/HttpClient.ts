@@ -2,7 +2,7 @@ import axios, { AxiosInstance } from 'axios';
 import { injectable } from 'inversify-props';
 
 @injectable()
-export default class HttpGateway {
+export default class HttpClient {
     public instance: AxiosInstance;
     public apiKey: string | undefined;
     public baseURL: string | undefined;
