@@ -15,7 +15,7 @@ import { Options, Vue } from 'vue-class-component';
 import { Prop } from 'vue-property-decorator';
 import { namespace } from 'vuex-class';
 
-const counterModule = namespace('counter');
+const counterModule = namespace('CounterModule');
 
 @Options({
     name: 'Counter'

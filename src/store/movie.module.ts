@@ -1,15 +1,27 @@
 import 'reflect-metadata';
 import { Inject } from 'inversify-props';
-import { Action, Mutation, Module, VuexModule } from 'vuex-class-modules';
+import {
+    Action,
+    Mutation,
+    Module,
+    VuexModule,
+    RegisterOptions
+} from 'vuex-class-modules';
 
 import MovieGateway from '@/api/gateways/MovieGateway';
 import { Movie } from '@/entities/external/movie';
+import SERVICE_IDENTIFIER from '@/identifiers';
 
 @Module({ generateMutationSetters: true })
 export default class MovieModule extends VuexModule {
-    @Inject()
+    constructor(props: RegisterOptions) {
+        super(props);
+    }
+
+    @Inject(SERVICE_IDENTIFIER.MOVIE_GATEWAY)
     private gateway!: MovieGateway;
 
+    private _page = 1;
     private _movieList: [Movie] | null = null;
     private _movie: Movie | null = null;
 
@@ -19,6 +31,10 @@ export default class MovieModule extends VuexModule {
 
     get movie(): Movie | null {
         return this._movie;
+    }
+
+    get page(): number {
+        return this._page;
     }
 
     @Mutation
@@ -31,11 +47,18 @@ export default class MovieModule extends VuexModule {
         this._movie = movie;
     }
 
+    @Mutation
+    public setPage(page: number): void {
+        this._page = page;
+    }
+
     @Action
     public async fetchMovies(): Promise<void> {
         try {
-            const response = await this.gateway.list();
-            this.setMovieList(response.data);
+            console.log(this.gateway);
+            console.log('here 1');
+            const response = await this.gateway.list(this.page);
+            this.setMovieList(response.data.items);
         } catch (error) {
             console.error(error);
         }

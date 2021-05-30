@@ -24,3 +24,8 @@ npm run test:unit
 ```
 npm run lint
 ```
+
+## The movie DB Documentation
+```angular2html
+https://developers.themoviedb.org/3/
+```
