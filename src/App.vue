@@ -1,22 +1,18 @@
 <template>
-    <nv-header />
-    <router-view />
-    <nv-footer />
+    <nv-layout />
 </template>
 
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component';
-import NvHeader from '@/components/NvHeader.vue';
-import NvFooter from '@/components/NvFooter.vue';
+import NvLayout from '@/components/layouts/NvLayout.vue';
 
 @Options({
-    name: 'Home',
+    name: 'App',
     components: {
-        NvHeader,
-        NvFooter
+        NvLayout
     }
 })
-export default class Home extends Vue {}
+export default class App extends Vue {}
 </script>
 
 <style>
