@@ -39,6 +39,7 @@ export default class MovieModule extends VuexModule {
 
     @Mutation
     public setMovieList(movieList: [Movie]): void {
+        console.log(movieList);
         this._movieList = movieList;
     }
 
@@ -64,7 +65,7 @@ export default class MovieModule extends VuexModule {
             do {
                 this.randomizePage();
                 response = await this.gateway.list(this.page);
-            } while (response.data.items.length < 30);
+            } while (response.data.item_count < 30);
             this.setMovieList(response.data.items);
         } catch (error) {
             console.error(error);
