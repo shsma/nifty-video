@@ -6,7 +6,6 @@ import SERVICE_IDENTIFIER from '@/identifiers';
 
 @injectable()
 export default class MovieGateway {
-    // https://api.themoviedb.org/3/list/99?api_key=728b1c73524e7e482910e452b355872b
     private resource = 'https://api.themoviedb.org/3/';
 
     public constructor(

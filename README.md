@@ -1,4 +1,10 @@
 # netflix-vue3-typescript
+
+###Highlights
+```angular2html
+You can use this Repo as a template for you project.
+Don't hesitate to hit the star button if you fin it useful.
+```
 ```angular2html
 This project adopts the IoC (Inversion Of Control) approach using Inversify
 ```
@@ -44,4 +50,6 @@ npm run lint
 ## The movie DB Documentation
 ```angular2html
 https://developers.themoviedb.org/3/
+ex:
+- https://api.themoviedb.org/3/list/99?api_key=728b1c73524e7e482910e452b355872b
 ```
