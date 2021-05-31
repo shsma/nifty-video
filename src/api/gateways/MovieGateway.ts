@@ -15,13 +15,21 @@ export default class MovieGateway {
         //
     }
 
-    public async list(page = 1): Promise<AxiosResponse> {
+    public async listMovies(page = 1): Promise<AxiosResponse> {
         return this.httpClient.instance.get(
             `${this.resource}/list/${page}?api_key=${this.httpClient.apiKey}`
         );
     }
 
-    public async get(id: number): Promise<AxiosResponse> {
-        return this.httpClient.instance.get(`${this.resource}/${id}`);
+    public async fetchMovie(id: number): Promise<AxiosResponse> {
+        return this.httpClient.instance.get(
+            `${this.resource}/movie/${id}?api_key=${this.httpClient.apiKey}`
+        );
+    }
+
+    public async fetchTrailer(id: number): Promise<AxiosResponse> {
+        return this.httpClient.instance.get(
+            `${this.resource}/movie/${id}/videos?api_key=${this.httpClient.apiKey}`
+        );
     }
 }
