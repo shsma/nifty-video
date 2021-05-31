@@ -50,6 +50,7 @@ npm run lint:fix
 
 ## The movie DB Documentation
 ```angular2html
+This project uses TMDB's Api, find further documentation below:
 https://developers.themoviedb.org/3/
 ex:
 - https://api.themoviedb.org/3/list/99?api_key={api_key}
