@@ -116,11 +116,7 @@ export default class MovieModule extends VuexModule {
                     this._movieList[currentIndex + 1].id
                 );
                 this.setTrailer(response.data.results[0]);
-                if (this._trailer) {
-                    this._trailer.movieId = this._movieList[
-                        currentIndex + 1
-                    ].id;
-                }
+                this._trailer.movieId = this._movieList[currentIndex + 1].id;
             }
         } catch (error) {
             console.error(error);
@@ -138,11 +134,7 @@ export default class MovieModule extends VuexModule {
                     this._movieList[currentIndex - 1].id
                 );
                 this.setTrailer(response.data.results[0]);
-                if (this._trailer) {
-                    this._trailer.movieId = this._movieList[
-                        currentIndex - 1
-                    ].id;
-                }
+                this._trailer.movieId = this._movieList[currentIndex - 1].id;
             }
         } catch (error) {
             console.error(error);
