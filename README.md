@@ -3,7 +3,7 @@
 ### Highlights
 ```angular2html
 You can use this Repo as a template for you project.
-Don't hesitate to hit the star button if you fin it useful.
+Don't hesitate to hit the star button if you find it useful.
 ```
 ```angular2html
 This project adopts the IoC (Inversion Of Control) approach using Inversify
