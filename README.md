@@ -1,4 +1,20 @@
 # netflix-vue3-typescript
+```angular2html
+This project adopts the IoC (Inversion Of Control) approach using Inversify
+```
+
+### Comes with this project
+```
+- Vue3
+- Typescript
+- Class Component Style
+- Vuex
+- Vue-Router
+- IoC (Inversion of control) using Inversify
+- ESLint + Prettier
+- TailwindCss
+```
+
 
 ## Project setup
 ```
