@@ -1,4 +1,4 @@
-# Netflix-Vue3-Typescript
+# Nifty-Video
 
 ### Highlights
 ```angular2html
