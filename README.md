@@ -1,6 +1,6 @@
 # netflix-vue3-typescript
 
-###Highlights
+### Highlights
 ```angular2html
 You can use this Repo as a template for you project.
 Don't hesitate to hit the star button if you fin it useful.
