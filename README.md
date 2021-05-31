@@ -52,5 +52,5 @@ npm run lint:fix
 ```angular2html
 https://developers.themoviedb.org/3/
 ex:
-- https://api.themoviedb.org/3/list/99?api_key=728b1c73524e7e482910e452b355872b
+- https://api.themoviedb.org/3/list/99?api_key={api_key}
 ```
