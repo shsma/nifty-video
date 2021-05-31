@@ -1,4 +1,4 @@
-# netflix-vue3-typescript
+# Netflix-Vue3-Typescript
 
 ### Highlights
 ```angular2html
