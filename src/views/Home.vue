@@ -1,17 +1,25 @@
 <template>
     <div class="home">
         <nv-trailer v-if="trailer"></nv-trailer>
-        <button @click="fetchMovies">Reload</button>
-        <div v-for="movie in movieList" :key="movie">
-            <div @click="fetchTrailer(movie.id)">{{ movie.title }}</div>
-            <img
-                :src="movieBackdrop(movie)"
-                alt=""
-                width="500"
-                height="600"
-                @click="fetchTrailer(movie.id)"
-            />
-        </div>
+        <button class="reload-movies" @click="fetchMovies">Reload</button>
+        <section
+            class="movie-box"
+            v-for="movie in movieList"
+            :key="movie"
+            @click="fetchTrailer(movie.id)"
+        >
+            <div class="movie-image">
+                <img
+                    :src="movieBackdrop(movie)"
+                    alt=""
+                    width="500"
+                    height="600"
+                />
+            </div>
+            <div class="movie-title">
+                <h2>{{ movie.title }}</h2>
+            </div>
+        </section>
     </div>
 </template>
 
@@ -49,3 +57,47 @@ export default class Home extends Vue {
     }
 }
 </script>
+
+<style>
+.reload-movies {
+    margin: 1rem 0 2rem 0;
+    padding: 0.5rem;
+    border: 2px solid #a9a9ce;
+    color: #575786;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.movie-box {
+    display: flex;
+    align-items: center;
+    border: 1px solid #9999b9;
+    border-radius: 15px 10px 10px 15px;
+    margin-bottom: 2rem;
+    cursor: pointer;
+}
+
+.movie-box:hover {
+    box-shadow: 0 0 11px #9999b9;
+}
+
+.movie-image {
+    margin-right: 1rem;
+}
+
+.movie-image img {
+    min-width: 500px;
+    border-radius: 10px 0 0 10px;
+}
+
+.movie-title {
+    padding: 2rem;
+}
+
+.movie-title h2 {
+    font-size: 1.5rem;
+    color: #575786;
+    font-weight: 500;
+}
+</style>
