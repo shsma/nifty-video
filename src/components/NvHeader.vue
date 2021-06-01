@@ -42,6 +42,11 @@ h2 {
     font-weight: 500;
 }
 
+p {
+    margin-top: 1.3rem;
+    font-size: 1.8rem;
+}
+
 .showcase-top {
     display: flex;
     flex-direction: column;
