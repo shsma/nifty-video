@@ -1,7 +1,7 @@
 <template>
     <header class="header">
         <div class="showcase-top">
-            <h1>Cinephile</h1>
+            <h1>NiftyVideo</h1>
         </div>
         <div class="showcase-content">
             <h2>
