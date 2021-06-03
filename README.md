@@ -52,7 +52,8 @@ npm run lint:fix
 ```angular2html
 This project uses TMDB's Api, find further documentation below:
 https://developers.themoviedb.org/3/
-ex:
+
+Call examples:
 - https://api.themoviedb.org/3/list/99?api_key={api_key}
 - http://api.themoviedb.org/3/movie/157336?api_key={api_key}&append_to_response=videos
 - http://api.themoviedb.org/3/movie/157336/videos?api_key={api_key}
