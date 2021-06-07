@@ -1,16 +1,31 @@
 <template>
     <header class="header">
         <div class="showcase-top">
-            <h1>NiftyVideo</h1>
+            <img src="../assets/logo.png" alt="header" />
+            <a class="nav-a" href="#">
+                <i class="fa fa-globe" aria-hidden="true"></i>
+                <i class="fa fa-caret-down" aria-hidden="true"></i>
+                <span>Français</span>
+            </a>
+            <a href="#" class="btn btn-rounded">Sign in</a>
         </div>
         <div class="showcase-content">
+            <h1>
+                Film,séries TV et bien <br />
+                plus en illimité.
+            </h1>
+            <p>Où que vous soyez. Annulez à tout moment</p>
             <h2>
-                No idea what to watch?
+                Prêt à regarder Netflix ? Saisissez votre adresse e-mail pour
+                vous abonner où réactiver votre <br />abonnement.
             </h2>
-            <h2>We got you covered</h2>
-            <p>
-                Discover our carefully selected movie list
-            </p>
+            <form action="/action_page.php">
+                <label for="email">Enter your email:</label>
+                <input type="email" id="email" name="email" />
+                <a href="#" class="btn btn-xl">
+                    Commencer <i class="fas fa-chevron-right btn-icon"></i>
+                </a>
+            </form>
         </div>
     </header>
 </template>
@@ -24,33 +39,14 @@ import { Options, Vue } from 'vue-class-component';
 export default class NvHeader extends Vue {}
 </script>
 
-<style scoped>
+<style>
 .header {
     width: 100%;
+    height: 93vh;
     position: relative;
-    margin-bottom: 4rem;
-}
-
-h1 {
-    font-size: 4rem;
-    font-weight: 500;
-    color: #6060e6;
-}
-
-h2 {
-    font-size: 2rem;
-    font-weight: 500;
-}
-
-p {
-    margin-top: 1.3rem;
-    font-size: 1.8rem;
-}
-
-.showcase-top {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    background-size: cover cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .showcase::after {
