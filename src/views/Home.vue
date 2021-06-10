@@ -2,6 +2,7 @@
     <div class="home">
         <nv-trailer v-if="trailer"></nv-trailer>
         <button class="reload-movies" @click="fetchMovies">Reload</button>
+        <br />
         <section
             class="movie-box"
             v-for="movie in movieList"
@@ -69,9 +70,11 @@ export default class Home extends Vue {
     border-radius: 4px;
 }
 .movie-box {
-    display: flex;
+    width: 80%;
+    display: inline-flex;
+    justify-content: space-between;
     align-items: center;
-    border: 1px solid #9999b9;
+    border: 1px solid crimson;
     border-radius: 15px 10px 10px 15px;
     margin-bottom: 2rem;
     cursor: pointer;
