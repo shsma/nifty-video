@@ -1,12 +1,13 @@
 <template>
     <iframe width="1080" height="720" :src="trailerSrc()"> </iframe>
     <div class="trailer-actions">
-        <div class="trailer-button" @click="nextTrailer">
-            <button>Next Trailer</button>
-        </div>
         <div class="trailer-button" @click="previousTrailer">
             <button>Previous Trailer</button>
         </div>
+        <div class="trailer-button" @click="nextTrailer">
+            <button>Next Trailer</button>
+        </div>
+
         <div class="trailer-button close" @click="closeTrailer">
             <button>Close</button>
         </div>
