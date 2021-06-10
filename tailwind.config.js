@@ -1,3 +1,6 @@
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const tailwindcss = require('tailwindcss');
+
 module.exports = {
     theme: {
         extend: {
@@ -9,5 +12,5 @@ module.exports = {
         }
     },
     variants: {},
-    plugins: []
+    plugins: [tailwindcss]
 };

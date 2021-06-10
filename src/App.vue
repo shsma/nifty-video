@@ -15,6 +15,8 @@ import NvLayout from '@/components/layouts/NvLayout.vue';
 export default class App extends Vue {}
 </script>
 
+<style src="./assets/scss/tailwind.css"></style>
+
 <style>
 #app {
     font-family: Avenir, Helvetica, Arial, sans-serif;
