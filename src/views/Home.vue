@@ -1,14 +1,11 @@
 <template>
     <div class="home">
         <nv-trailer v-if="trailer"></nv-trailer>
-        <button class="reload-movies" @click="fetchMovies">Reload</button>
+        <!--        <button class="reload-movies" @click="fetchMovies">Reload</button>-->
         <br />
-        <div class="wrapper">
-            <div class="arrow-left">
-                <i class="icon-angle-left"></i>
-            </div>
-            <section
-                class="section-1"
+        <div class="carousel">
+            <div
+                class="carousel-box"
                 id="section1"
                 v-for="movie in movieList"
                 :key="movie"
@@ -25,9 +22,8 @@
                 <div class="movie-title">
                     <h2>{{ movie.title }}</h2>
                 </div>
-            </section>
-            <div class="arrow-right">
-                <i class="icon-angle-right"></i>
+                <a class="switchLeft sliderButton"></a>
+                <a class="switchRight sliderButton"></a>
             </div>
         </div>
     </div>
@@ -66,34 +62,13 @@ export default class Home extends Vue {
         return `${process.env.VUE_APP_IMAGE_API}${movie.backdrop_path}`;
     }
 }
+// const slider = document.querySelector('.carouselbox');
+// let scrollPerClick;
+// const ImagePadding = 20;
+// show;
 </script>
 
 <style>
-.reload-movies {
-    margin: 1rem 0 2rem 0;
-    padding: 0.5rem;
-    width: 300px;
-    border: none;
-    background: black;
-    color: #ffffff !important;
-    font-weight: 100;
-    text-transform: uppercase;
-    border-radius: 6px;
-    display: inline-block;
-    transition: all 0.3s ease 0s;
-    letter-spacing: 2px;
-}
-
-.reload-movies:hover {
-    color: #404040 !important;
-    font-weight: 700 !important;
-    letter-spacing: 5px;
-    background: none;
-    -webkit-box-shadow: 0 5px 40px -10px rgba(0, 0, 0, 0.57);
-    -moz-box-shadow: 0 5px 40px -10px rgba(0, 0, 0, 0.57);
-    transition: all 0.3s ease 0s;
-}
-
 /*.movie-box {*/
 /*    width: 80%;*/
 /*    display: inline-flex;*/
@@ -105,16 +80,6 @@ export default class Home extends Vue {
 /*    cursor: pointer;*/
 /*}*/
 
-.wrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    height: 50vh;
-    overflow: hidden;
-    background-color: black;
-}
-
 /*.movie-box:hover {*/
 /*    box-shadow: 0 0 11px #9999b9;*/
 /*}*/
@@ -123,7 +88,7 @@ export default class Home extends Vue {
     margin-right: 1rem;
 }
 .movie-image img {
-    min-width: 480px;
+    min-width: 500px;
     border-radius: 10px 10px 10px 10px;
 }
 .movie-title {

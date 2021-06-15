@@ -17,6 +17,8 @@
             <br />
             <h3>Are in <span>Here</span></h3>
         </div>
+        <br />
+        <button class="reload-movies" @click="fetchMovies">Reload</button>
     </section>
 </template>
 
