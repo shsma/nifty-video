@@ -65,39 +65,9 @@ export default class Home extends Vue {
         return `${process.env.VUE_APP_IMAGE_API}${movie.backdrop_path}`;
     }
 }
-// const slider = document.querySelector('.carouselbox');
-// let scrollPerClick;
-// const ImagePadding = 20;
-// show;
 </script>
 
 <style>
-/*.carousel {*/
-/*    display: flex;*/
-/*    flex-wrap: wrap;*/
-/*    justify-content: center;*/
-/*    align-items: center;*/
-/*    height: 100vh;*/
-/*    width: 100vh;*/
-
-/*    overflow: hidden;*/
-/*}*/
-
-/*.carousel-box {*/
-/*    width: 80%;*/
-/*    display: inline-flex;*/
-/*    justify-content: space-between;*/
-/*    align-items: center;*/
-/*    border: 1px solid crimson;*/
-/*    border-radius: 15px 10px 10px 15px;*/
-/*    margin-bottom: 2rem;*/
-/*    cursor: pointer;*/
-/*}*/
-
-/*.carousel-box:hover {*/
-/*    box-shadow: 0 0 11px #9999b9;*/
-/*}*/
-
 .container-films {
     display: flex;
     flex-wrap: wrap;
