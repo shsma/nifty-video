@@ -1,9 +1,7 @@
 <template>
-    <div class="page-wrapper">
-        <nv-header />
-        <router-view />
-        <nv-footer />
-    </div>
+    <nv-header />
+    <router-view />
+    <nv-footer />
 </template>
 
 <script lang="ts">
@@ -20,12 +18,3 @@ import NvFooter from '@/components/NvFooter.vue';
 })
 export default class NvLayout extends Vue {}
 </script>
-
-<style>
-.page-wrapper {
-    width: 100%;
-    max-width: 1350px;
-    margin: auto;
-    padding: 5rem;
-}
-</style>

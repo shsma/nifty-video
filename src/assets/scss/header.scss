@@ -1,18 +1,112 @@
+@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/3.1.0/css/font-awesome.min.css";
+
 .header {
     width: 100%;
-    height: 93vh;
+    height: 80px;
+    display: block;
+    background-color: #101010;
     position: relative;
-    background: src="../assets/logo.png" no-repeat center center/cover;
+    min-height: 30px;
+}
+.inner_header {
+    width: 1000px;
+    height: 50%;
+    display: block;
+    margin: 0 auto;
 }
 
-.showcase::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
+.logo_container {
     height: 100%;
-    z-index: 1;
-    background: rgba(0, 0, 0, 0.6);
-    box-shadow: inset 120px 100px 250px #000000;
+    display: table;
+    position: absolute;
+    float: left;
+    font-family: 'Roboto Condensed', 'Roboto', sans-serif;
 }
+
+.logo_container h1 {
+    color: #20B2AA;
+    height: 100%;
+    display: table-cell;
+    vertical-align: middle;
+    font-family: 'Roboto Condensed', 'Roboto', sans-serif;;
+    font-size: 32px;
+    font-weight: 200;
+}
+
+.logo_container h1 span {
+    font-weight: 800;
+    color: white;
+}
+
+.useful {
+    float: right;
+    height: 100%;
+    padding-top: 20px;
+}
+
+.useful a {
+    height: 100%;
+    display: table;
+    float: left;
+    padding: 15px 20px;
+}
+
+.useful a:last-child {
+    padding: 7px 20px;
+    border-radius: 30px;
+    margin-top: 10px;
+    background: #20B2AA;
+}
+
+.useful a:last-child:hover {
+    background: transparent;
+}
+
+.useful a li {
+    display: table-cell;
+    vertical-align: middle;
+    height: 100%;
+    color: white;
+    font-family: 'Roboto Condensed', 'Roboto', sans-serif;;
+    font-size: 16px;
+}
+
+section {
+    background-image: url('img.jpg');;
+    width:100%;
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.tag_line h2 {
+    font-weight: 1000;
+    font-size: 35px;
+    color: white;
+    font-family: 'Roboto Condensed', 'Roboto', sans-serif;
+    font-style: italic;
+    padding: 130px 30px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.tag_line h3 {
+    font-weight: 600;
+    font-size: 30px;
+    color: white;
+    font-family: 'Roboto Condensed', 'Roboto', sans-serif;
+    font-style: italic;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.tag_line h3 span {
+    font-weight: 600;
+    font-size: 30px;
+    color: black;
+    font-family: 'Roboto Condensed', 'Roboto', sans-serif;
+    font-style: italic;
+    text-transform: uppercase;
+}
+
+

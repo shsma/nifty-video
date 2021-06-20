@@ -1,2 +1,33 @@
 @import 'header.scss';
 @import 'navbar.scss';
+
+@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/3.1.0/css/font-awesome.min.css";
+
+.reload-movies {
+    margin: 1rem 0 2rem 0;
+    padding: 0.5rem;
+    width: 80%;
+    height: 50px;
+    border: none !important;
+    background-color: rgb(32, 178, 170, 0.8);
+    color: #ffffff !important;
+    font-weight: 100;
+    font-family: 'Roboto Condensed', 'Roboto', sans-serif;
+    text-transform: uppercase;
+    border-radius: 6px;
+    display: inline-block;
+    transition: all 0.3s ease 0s;
+    letter-spacing: 3px;
+}
+
+.reload-movies:hover {
+    color: #20B2AA !important;
+    font-weight: 700 !important;
+    background: none;
+    border: none;
+    letter-spacing: 7px;
+    -webkit-box-shadow: 0 5px 40px -10px rgba(0, 0, 0, 0.67);
+    -moz-box-shadow: 0 5px 40px -10px rgba(0, 0, 0, 0.67);
+    transition: all 0.3s ease 0s;
+}
+
