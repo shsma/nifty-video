@@ -1,29 +1,32 @@
 <template>
     <div class="home">
         <nv-trailer v-if="trailer"></nv-trailer>
-        <!--        <button class="reload-movies" @click="fetchMovies">Reload</button>-->
-        <br />
-        <div class="carousel">
-            <div
-                class="carousel-box"
-                id="section1"
-                v-for="movie in movieList"
-                :key="movie"
-                @click="fetchTrailer(movie.id)"
-            >
-                <div class="movie-image">
-                    <img
-                        :src="movieBackdrop(movie)"
-                        alt=""
-                        width="500"
-                        height="600"
-                    />
+        <button class="reload-movies" @click="fetchMovies">
+            Reload <i class="fal fa-sync-alt"></i>
+        </button>
+        <div class="container-films">
+            <div class="row">
+                <div
+                    class="col-4"
+                    id="section1"
+                    v-for="movie in movieList"
+                    :key="movie"
+                    @click="fetchTrailer(movie.id)"
+                >
+                    <div class="movie-image">
+                        <img
+                            :src="movieBackdrop(movie)"
+                            alt=""
+                            width="500"
+                            height="600"
+                        />
+                    </div>
+                    <div class="movie-title">
+                        <h2>{{ movie.title }}</h2>
+                    </div>
+                    <a class="switchLeft sliderButton"></a>
+                    <a class="switchRight sliderButton"></a>
                 </div>
-                <div class="movie-title">
-                    <h2>{{ movie.title }}</h2>
-                </div>
-                <a class="switchLeft sliderButton"></a>
-                <a class="switchRight sliderButton"></a>
             </div>
         </div>
     </div>
@@ -69,7 +72,18 @@ export default class Home extends Vue {
 </script>
 
 <style>
-/*.movie-box {*/
+/*.carousel {*/
+/*    display: flex;*/
+/*    flex-wrap: wrap;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    height: 100vh;*/
+/*    width: 100vh;*/
+
+/*    overflow: hidden;*/
+/*}*/
+
+/*.carousel-box {*/
 /*    width: 80%;*/
 /*    display: inline-flex;*/
 /*    justify-content: space-between;*/
@@ -80,12 +94,22 @@ export default class Home extends Vue {
 /*    cursor: pointer;*/
 /*}*/
 
-/*.movie-box:hover {*/
+/*.carousel-box:hover {*/
 /*    box-shadow: 0 0 11px #9999b9;*/
 /*}*/
 
+.container-films {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    cursor: pointer;
+}
 .movie-image {
-    margin-right: 1rem;
+    padding-right: 10%;
+    width: 60%;
 }
 .movie-image img {
     min-width: 500px;
@@ -93,7 +117,7 @@ export default class Home extends Vue {
 }
 .movie-title {
     padding: 1rem;
-    background-color: papayawhip;
+    background-color: transparent;
 }
 .movie-title h2 {
     font-size: 1rem;

@@ -5,9 +5,11 @@
                 <h1>Nifty<span>VIDEO</span></h1>
             </div>
             <ul class="useful">
-                <a><li>About</li></a>
-                <a><li>Contact</li></a>
-                <a><li>Sign in</li></a>
+                <a href="#"><li>About</li></a>
+                <a href="#"><li>Contact</li></a>
+                <a href="#"
+                    ><li><i class="fa fa-user"></i> Sign in</li></a
+                >
             </ul>
         </div>
     </header>
@@ -18,7 +20,7 @@
             <h3>Are in <span>Here</span></h3>
         </div>
         <br />
-        <button class="reload-movies" @click="fetchMovies">Reload</button>
+        <!--        <button class="reload-movies" @click="fetchMovies">Reload</button>-->
     </section>
 </template>
 

@@ -1,18 +1,16 @@
-* {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    text-decoration: none;
-}
+@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/3.1.0/css/font-awesome.min.css";
+
 .header {
     width: 100%;
-    height: 50px;
+    height: 80px;
     display: block;
     background-color: #101010;
+    position: relative;
+    min-height: 30px;
 }
 .inner_header {
     width: 1000px;
-    height: 70%;
+    height: 50%;
     display: block;
     margin: 0 auto;
 }
@@ -20,12 +18,13 @@
 .logo_container {
     height: 100%;
     display: table;
+    position: absolute;
     float: left;
     font-family: 'Roboto Condensed', 'Roboto', sans-serif;
 }
 
 .logo_container h1 {
-    color: crimson;
+    color: #20B2AA;
     height: 100%;
     display: table-cell;
     vertical-align: middle;
@@ -42,6 +41,7 @@
 .useful {
     float: right;
     height: 100%;
+    padding-top: 20px;
 }
 
 .useful a {
@@ -52,7 +52,14 @@
 }
 
 .useful a:last-child {
-    padding-right: 0;
+    padding: 7px 20px;
+    border-radius: 30px;
+    margin-top: 10px;
+    background: #20B2AA;
+}
+
+.useful a:last-child:hover {
+    background: transparent;
 }
 
 .useful a li {
@@ -67,9 +74,10 @@
 section {
     background-image: url('img.jpg');;
     width:100%;
-    height: 400px;
+    height: 500px;
     background-repeat: no-repeat;
     background-size: cover;
+
 }
 .tag_line h2 {
     font-weight: 1000;
@@ -77,50 +85,28 @@ section {
     color: white;
     font-family: 'Roboto Condensed', 'Roboto', sans-serif;
     font-style: italic;
-    padding: 30px;
+    padding: 130px 30px;
     text-transform: uppercase;
+    text-align: center;
 }
 
 .tag_line h3 {
     font-weight: 600;
-    font-size: 25px;
+    font-size: 30px;
     color: white;
     font-family: 'Roboto Condensed', 'Roboto', sans-serif;
     font-style: italic;
     text-transform: uppercase;
+    text-align: center;
 }
 
 .tag_line h3 span {
     font-weight: 600;
-    font-size: 25px;
+    font-size: 30px;
     color: black;
     font-family: 'Roboto Condensed', 'Roboto', sans-serif;
     font-style: italic;
     text-transform: uppercase;
 }
 
-.reload-movies {
-    margin: 1rem 0 2rem 0;
-    padding: 0.5rem;
-    width: 600px;
-    border: none;
-    background: none;
-    color: #ffffff !important;
-    font-weight: 100;
-    font-family: 'Roboto Condensed', 'Roboto', sans-serif;
-    text-transform: uppercase;
-    border-radius: 6px;
-    display: inline-block;
-    transition: all 0.3s ease 0s;
-    letter-spacing: 3px;
-}
 
-.reload-movies:hover {
-    color: #404040 !important;
-    font-weight: 700 !important;
-    background: none;
-    letter-spacing: 7px;
-    -webkit-box-shadow: 0 5px 40px -10px rgba(0, 0, 0, 0.67);
-    -moz-box-shadow: 0 5px 40px -10px rgba(0, 0, 0, 0.67);
-    transition: all 0.3s ease 0s;
-}
