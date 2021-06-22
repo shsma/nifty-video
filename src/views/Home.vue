@@ -21,9 +21,9 @@
                                 width="500"
                                 height="600"
                             />
-                            <div class="play">
+                            <button class="trailer-button" @click="trailer">
                                 <i class="fal fa-play-circle"></i>
-                            </div>
+                            </button>
                         </div>
                         <div class="movie-title">
                             <h2>{{ movie.title }}</h2>
