@@ -13,19 +13,22 @@
                     :key="movie"
                     @click="fetchTrailer(movie.id)"
                 >
-                    <div class="movie-image">
-                        <img
-                            :src="movieBackdrop(movie)"
-                            alt=""
-                            width="500"
-                            height="600"
-                        />
+                    <div class="movie-image-container">
+                        <div class="movie-image">
+                            <img
+                                :src="movieBackdrop(movie)"
+                                alt=""
+                                width="500"
+                                height="600"
+                            />
+                            <div class="play">
+                                <i class="fal fa-play-circle"></i>
+                            </div>
+                        </div>
+                        <div class="movie-title">
+                            <h2>{{ movie.title }}</h2>
+                        </div>
                     </div>
-                    <div class="movie-title">
-                        <h2>{{ movie.title }}</h2>
-                    </div>
-                    <a class="switchLeft sliderButton"></a>
-                    <a class="switchRight sliderButton"></a>
                 </div>
             </div>
         </div>
@@ -92,6 +95,23 @@ export default class Home extends Vue {
     transition: all 0.2s ease-in-out;
     opacity: 1;
     filter: alpha(opacity=100);
+}
+
+.movie-image i {
+    position: absolute;
+    transform: translate(30%, -180%);
+    -ms-transform: translate(-30%, -100%);
+    background-color: transparent;
+    color: white;
+    font-size: 60px;
+    padding: 20px 50px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.movie-image i:hover {
+    color: Red;
 }
 
 .movie-title {
