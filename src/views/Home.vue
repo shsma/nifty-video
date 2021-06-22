@@ -84,7 +84,16 @@ export default class Home extends Vue {
 .movie-image img {
     min-width: 500px;
     border-radius: 10px 10px 10px 10px;
+    opacity: 0.6;
+    filter: alpha(opacity=40);
 }
+.movie-image img:hover {
+    transform: scale(1.05);
+    transition: all 0.2s ease-in-out;
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+
 .movie-title {
     padding: 1rem;
     background-color: transparent;
