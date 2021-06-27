@@ -13,7 +13,7 @@
                     :key="movie"
                     @click="fetchTrailer(movie.id)"
                 >
-                    <div class="view overlay zoom">
+                    <div class="view">
                         <div class="movie-image">
                             <img
                                 :src="movieBackdrop(movie)"
@@ -21,7 +21,7 @@
                                 width="500"
                                 height="600"
                             />
-                            <div class="mask flex-center">
+                            <div class="flex-center">
                                 <button class="trailer-button" @click="trailer">
                                     <i class="fal fa-play-circle"></i>
                                 </button>
@@ -81,6 +81,29 @@ export default class Home extends Vue {
 </script>
 
 <style>
+@media (max-width: 9000px) {
+    #rig li {
+        width: 25%;
+    }
+}
+
+@media (max-width: 800px) {
+    #rig li {
+        width: 33.33%;
+    }
+}
+
+@media (max-width: 500px) {
+    #rig li {
+        width: 50%;
+    }
+}
+
+@media (max-width: 350px) {
+    #rig li {
+        width: 100%;
+    }
+}
 .movie-container {
     display: flex;
     flex-wrap: wrap;
@@ -89,6 +112,13 @@ export default class Home extends Vue {
     margin-right: auto;
     align-items: center;
     cursor: pointer;
+}
+
+.col-4:hover {
+    transform: scale(1.05);
+    transition: all 0.2s ease-in-out;
+    filter: alpha(opacity=100);
+    opacity: 0.3;
 }
 .view {
     padding-right: 10%;
@@ -103,12 +133,12 @@ export default class Home extends Vue {
     border-radius: 10px 10px 10px 10px;
 }
 
-.movie-image-container img:hover {
-    transform: scale(1.05);
-    transition: all 0.2s ease-in-out;
-    filter: alpha(opacity=100);
-    opacity: 0.3;
-}
+/*.movie-image-container img:hover {*/
+/*    transform: scale(1.05);*/
+/*    transition: all 0.2s ease-in-out;*/
+/*    filter: alpha(opacity=100);*/
+/*    opacity: 0.3;*/
+/*}*/
 
 /*.movie-image-container i {*/
 /*    position: absolute;*/
@@ -123,18 +153,34 @@ export default class Home extends Vue {
 /*    border-radius: 5px;*/
 /*}*/
 
-.overlay-content {
-    transition: 0.5s ease;
-    opacity: 1;
+/*.overlay-content {*/
+/*    transition: 0.5s ease;*/
+/*    opacity: 1;*/
+/*    position: absolute;*/
+/*    transform: translate(30%, -180%);*/
+/*    -ms-transform: translate(-30%, -100%);*/
+/*    text-align: center;*/
+/*}*/
+
+.rig-overlay {
     position: absolute;
-    transform: translate(30%, -180%);
-    -ms-transform: translate(-30%, -100%);
-    text-align: center;
+    display: block;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    background: white;
+    background-size: 50px 50px;
+    opacity: 0;
+    filter: alpha(opacity=0); /*For older IE*/
+    transition: all 0.3s;
 }
+
 .movie-image-container i {
     position: absolute;
     transform: translate(30%, -180%);
-    -ms-transform: translate(-30%, -100%);
+    -ms-transform: translate(-30%, -180%);
     background-color: transparent;
     color: white;
     font-size: 60px;
@@ -147,17 +193,6 @@ export default class Home extends Vue {
 .movie-image-container i:hover {
     opacity: 1;
 }
-
-/*.overlay-content {*/
-/*    transition: 0.5s ease;*/
-/*    opacity: 0;*/
-/*    position: absolute;*/
-/*    top: 50%;*/
-/*    left: 50%;*/
-/*    transform: translate(-50%, -50%);*/
-/*    -ms-transform: translate(-50%, -50%);*/
-/*    text-align: center;*/
-/*}*/
 
 .movie-title {
     padding: 1rem;
