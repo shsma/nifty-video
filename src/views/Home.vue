@@ -124,15 +124,53 @@ export default class Home extends Vue {
     padding-right: 10%;
     width: 60%;
 }
+.flex-center {
+    display: block;
+    transform: translate(30%, -180%);
+    -ms-transform: translate(-30%, -100%);
+    opacity: 1;
+}
+
 .movie-image img {
     min-width: 500px;
     opacity: 1;
     display: block;
-    transition: 0.5s ease;
     backface-visibility: hidden;
     border-radius: 10px 10px 10px 10px;
+    filter: blur(0px);
+    transition: filter 0.3s ease-in;
+    transform: scale(1.03);
 }
 
+.movie-image img:hover {
+    filter: blur(1px);
+}
+.trailer-button {
+    display: flex;
+    transform: translate(30%, -180%);
+    -ms-transform: translate(-30%, -100%);
+    flex-grow: 1;
+    text-align: center;
+    opacity: 0.4;
+    margin-left: 80px;
+    margin-top: 85px;
+}
+
+.trailer-button i {
+    position: absolute;
+    transform: translate(30%, -180%);
+    -ms-transform: translate(-30%, -100%);
+    border-radius: 25vw;
+    background: rgba(0, 0, 0, 0.5);
+    border: 0.1em solid white;
+    padding: 1.2vw;
+    font-size: 2.5vw;
+}
+.trailer-button:hover {
+    color: red;
+    opacity: 1;
+    transition: 0.2s;
+}
 /*.movie-image-container img:hover {*/
 /*    transform: scale(1.05);*/
 /*    transition: all 0.2s ease-in-out;*/
@@ -177,29 +215,12 @@ export default class Home extends Vue {
     transition: all 0.3s;
 }
 
-.movie-image-container i {
-    position: absolute;
-    transform: translate(30%, -180%);
-    -ms-transform: translate(-30%, -180%);
-    background-color: transparent;
-    color: white;
-    font-size: 60px;
-    padding: 20px 50px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-.movie-image-container i:hover {
-    opacity: 1;
-}
-
 .movie-title {
     padding: 1rem;
     background-color: transparent;
 }
 .movie-title h2 {
-    font-size: 1rem;
+    font-size: 20px;
     color: black;
     font-weight: 300;
     text-transform: uppercase;
