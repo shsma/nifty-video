@@ -46,7 +46,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="movie-title">
+                        <div class="movie-title underline--magical">
                             <h2>{{ movie.title }}</h2>
                         </div>
                     </div>

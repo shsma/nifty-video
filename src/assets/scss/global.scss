@@ -124,16 +124,29 @@ h4 {
     padding-top: 4px;
 }
 .movie-title {
-    padding: 1rem;
+    padding: 2rem;
     background-color: transparent;
 }
 .movie-title h2 {
+    padding-right: 30px;
     font-size: 15px;
     color: black;
     font-weight: 300;
     text-transform: uppercase;
 }
 
-.movie-title h2:hover {
-    color: crimson;
+.underline--magical {
+    background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+    background-repeat: no-repeat;
+    background-size: 90% 0.2em;
+    padding-bottom: 10px;
+    background-position: 0 88%;
+    transition: background-size 0.25s ease-in;
 }
+.underline--magical:hover {
+    background-size: 90% 40%;
+}
+
+
+
+
