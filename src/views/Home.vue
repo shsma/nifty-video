@@ -21,17 +21,28 @@
                                 width="500"
                                 height="600"
                             />
-                            <div class="flex-center">
+                            <div class="image-overlay">
                                 <button class="trailer-button" @click="trailer">
                                     <i class="fal fa-play-circle"></i>
                                 </button>
                                 <div class="properties">
-                                    <span class="movie-title">
-                                        <h2>{{ movie.title }}</h2>
+                                    <span class="vote_average">
+                                        <h3>
+                                            Vote average :
+                                            {{ movie.vote_average }}
+                                        </h3>
                                     </span>
-                                    <span class="year">2012</span>
-                                    <span class="age-limit">13+</span>
-                                    <span class="time">2h 13m</span>
+                                    <span class="release_date">
+                                        <h4>
+                                            release date :
+                                            {{ movie.release_date }}
+                                        </h4>
+                                    </span>
+                                    <!--                                    <span class="age-limit">-->
+                                    <!--                                        <h2>-->
+                                    <!--                                            {{ movie.adult }}-->
+                                    <!--                                        </h2>-->
+                                    <!--                                    </span> need function to return if movie +18 or not -->
                                 </div>
                             </div>
                         </div>
@@ -108,119 +119,77 @@ export default class Home extends Vue {
     display: flex;
     flex-wrap: wrap;
     width: 90%;
+    gap: 1px;
     margin-left: auto;
     margin-right: auto;
     align-items: center;
     cursor: pointer;
 }
 
-.col-4:hover {
-    transform: scale(1.05);
-    transition: all 0.2s ease-in-out;
-    filter: alpha(opacity=100);
-    opacity: 0.3;
+.movie-image {
+    position: relative;
+    width: 90%;
 }
-.view {
-    padding-right: 10%;
-    width: 60%;
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    opacity: 0;
+    transition: opacity 0.25s;
 }
-.flex-center {
-    display: block;
-    transform: translate(30%, -180%);
-    -ms-transform: translate(-30%, -100%);
+.image-overlay > * {
+    transform: translateY(20px) scale(1.02);
+    transition: transform 0.25s;
+}
+
+.image-overlay:hover {
     opacity: 1;
 }
 
-.movie-image img {
-    min-width: 500px;
-    opacity: 1;
-    display: block;
-    backface-visibility: hidden;
-    border-radius: 10px 10px 10px 10px;
-    filter: blur(0px);
-    transition: filter 0.3s ease-in;
-    transform: scale(1.03);
+.image-overlay:hover > * {
+    transform: translateY(0);
 }
 
-.movie-image img:hover {
-    filter: blur(1px);
+.movie-image {
+    display: block;
 }
+
 .trailer-button {
-    display: flex;
-    transform: translate(30%, -180%);
-    -ms-transform: translate(-30%, -100%);
     flex-grow: 1;
     text-align: center;
     opacity: 0.4;
-    margin-left: 80px;
-    margin-top: 85px;
 }
 
 .trailer-button i {
-    position: absolute;
-    transform: translate(30%, -180%);
-    -ms-transform: translate(-30%, -100%);
     border-radius: 25vw;
     background: rgba(0, 0, 0, 0.5);
     border: 0.1em solid white;
     padding: 1.2vw;
-    font-size: 2.5vw;
+    font-size: 1.5vw;
+    margin-top: 70px;
+    margin-bottom: 20px;
 }
 .trailer-button:hover {
     color: red;
     opacity: 1;
     transition: 0.2s;
+    visibility: visible;
 }
-/*.movie-image-container img:hover {*/
-/*    transform: scale(1.05);*/
-/*    transition: all 0.2s ease-in-out;*/
-/*    filter: alpha(opacity=100);*/
-/*    opacity: 0.3;*/
-/*}*/
-
-/*.movie-image-container i {*/
-/*    position: absolute;*/
-/*    transform: translate(30%, -180%);*/
-/*    -ms-transform: translate(-30%, -100%);*/
-/*    background-color: transparent;*/
-/*    color: white;*/
-/*    font-size: 60px;*/
-/*    padding: 20px 50px;*/
-/*    border: none;*/
-/*    cursor: pointer;*/
-/*    border-radius: 5px;*/
-/*}*/
-
-/*.overlay-content {*/
-/*    transition: 0.5s ease;*/
-/*    opacity: 1;*/
-/*    position: absolute;*/
-/*    transform: translate(30%, -180%);*/
-/*    -ms-transform: translate(-30%, -100%);*/
-/*    text-align: center;*/
-/*}*/
-
-.rig-overlay {
-    position: absolute;
-    display: block;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    margin: auto;
-    background: white;
-    background-size: 50px 50px;
-    opacity: 0;
-    filter: alpha(opacity=0); /*For older IE*/
-    transition: all 0.3s;
+h4 {
+    padding-top: 4px;
 }
-
 .movie-title {
     padding: 1rem;
     background-color: transparent;
 }
 .movie-title h2 {
-    font-size: 20px;
+    font-size: 15px;
     color: black;
     font-weight: 300;
     text-transform: uppercase;
