@@ -5,11 +5,11 @@
                 <h1>Nifty<span>VIDEO</span></h1>
             </div>
             <ul class="useful">
-                <a href="#"><li>About</li></a>
-                <a href="#"><li>Contact</li></a>
-                <a href="#"
-                    ><li><i class="fa fa-user"></i> Sign in</li></a
-                >
+                <li><a href="#" class="menu">About</a></li>
+                <li><a href="#" class="menu">Contact</a></li>
+                <li>
+                    <a href="#"> <i class="fa fa-user"></i> Sign in</a>
+                </li>
             </ul>
         </div>
     </header>
