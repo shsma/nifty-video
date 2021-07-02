@@ -4,7 +4,7 @@
         <button class="reload-movies" @click="fetchMovies">
             Reload <i class="fal fa-sync-alt"></i>
         </button>
-        <div class="container-films">
+        <div class="movie-container">
             <div class="row">
                 <div
                     class="col-4"
@@ -13,19 +13,43 @@
                     :key="movie"
                     @click="fetchTrailer(movie.id)"
                 >
-                    <div class="movie-image">
-                        <img
-                            :src="movieBackdrop(movie)"
-                            alt=""
-                            width="500"
-                            height="600"
-                        />
+                    <div class="view">
+                        <div class="movie-image">
+                            <img
+                                :src="movieBackdrop(movie)"
+                                alt=""
+                                width="500"
+                                height="600"
+                            />
+                            <div class="image-overlay">
+                                <button class="trailer-button" @click="trailer">
+                                    <i class="fal fa-play-circle"></i>
+                                </button>
+                                <div class="properties">
+                                    <span class="vote_average">
+                                        <h3>
+                                            Vote average :
+                                            {{ movie.vote_average }}
+                                        </h3>
+                                    </span>
+                                    <span class="release_date">
+                                        <h4>
+                                            release date :
+                                            {{ movie.release_date }}
+                                        </h4>
+                                    </span>
+                                    <!--                                    <span class="age-limit">-->
+                                    <!--                                        <h2>-->
+                                    <!--                                            {{ movie.adult }}-->
+                                    <!--                                        </h2>-->
+                                    <!--                                    </span> need function to return if movie +18 or not -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="movie-title underline--magical">
+                            <h2>{{ movie.title }}</h2>
+                        </div>
                     </div>
-                    <div class="movie-title">
-                        <h2>{{ movie.title }}</h2>
-                    </div>
-                    <a class="switchLeft sliderButton"></a>
-                    <a class="switchRight sliderButton"></a>
                 </div>
             </div>
         </div>
@@ -67,36 +91,4 @@ export default class Home extends Vue {
 }
 </script>
 
-<style>
-.container-films {
-    display: flex;
-    flex-wrap: wrap;
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-    align-items: center;
-    cursor: pointer;
-}
-.movie-image {
-    padding-right: 10%;
-    width: 60%;
-}
-.movie-image img {
-    min-width: 500px;
-    border-radius: 10px 10px 10px 10px;
-}
-.movie-title {
-    padding: 1rem;
-    background-color: transparent;
-}
-.movie-title h2 {
-    font-size: 1rem;
-    color: black;
-    font-weight: 300;
-    text-transform: uppercase;
-}
-
-.movie-title h2:hover {
-    color: crimson;
-}
-</style>
+<style></style>

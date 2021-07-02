@@ -1,0 +1,64 @@
+@media (min-width: 1200px) {
+    #footer {
+        margin: auto;
+        max-width: 1340px;
+    }
+}
+
+#footer {
+    color: #666;
+    text-align: center;
+}
+
+@media (min-width: 900px) {
+    #footer .footer-container {
+        margin: 20px 45px;
+        vertical-align: baseline;
+    }
+}
+
+div {
+    display: block;
+}
+
+.footer-container {
+    padding: 35px 0;
+    border-top: 1px solid #20B2AA;
+    font-size: 14px;
+}
+
+.left {
+    float: left;
+    font-weight: 700;
+    letter-spacing: 1rem;
+}
+
+
+.right {
+    display: inline-block;
+    float: right;
+    height: 100%;
+}
+
+
+.right li {
+    height: 100%;
+    display: table;
+    float: left;
+    text-align: -webkit-match-parent;
+
+}
+
+.right li a {
+    display: table-cell;
+    vertical-align: center;
+    height: 100%;
+    color: #666;
+    font-family: 'Roboto Condensed', 'Roboto', sans-serif;
+    padding-top: 2px;
+}
+
+
+.right li a:hover {
+    color: #20B2AA ;
+}
