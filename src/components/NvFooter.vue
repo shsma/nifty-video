@@ -9,7 +9,6 @@
                     <li>
                         Created by<a href="#" target="_blank"
                             >Velox Solutions</a
-                            <hr/>
                         >
                     </li>
                 </ul>
