@@ -6,7 +6,13 @@
             </div>
             <ul class="useful">
                 <li><a href="#" class="menu">About</a></li>
+
                 <li><a href="#" class="menu">Contact</a></li>
+                <li>
+                    <a href="#" class="menu"
+                        ><i class="fas fa-globe"></i>Français</a
+                    >
+                </li>
                 <li>
                     <a href="#"> <i class="fa fa-user"></i> Sign in</a>
                 </li>
