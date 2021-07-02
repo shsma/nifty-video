@@ -12,7 +12,6 @@
                         >
                     </li>
                 </ul>
-                <hr/>
             </div>
             <div style="clear: both"></div>
         </div>
@@ -27,3 +26,5 @@ import { Options, Vue } from 'vue-class-component';
 })
 export default class NvFooter extends Vue {}
 </script>
+
+<style></style>
