@@ -8,7 +8,8 @@
                     <li><a href="#" class="nav-link">Contact</a></li>
                     <li>
                         Created by<a href="#" target="_blank"
-                            >Khouloud Laarous</a
+                            >Velox Solutions</a
+                            <hr/>
                         >
                     </li>
                 </ul>
