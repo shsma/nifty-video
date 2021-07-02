@@ -10,7 +10,7 @@
                 <li><a href="#" class="menu">Contact</a></li>
                 <li>
                     <a href="#" class="menu"
-                        ><i class="fas fa-globe"></i>Français</a
+                        ><i class="fas fa-globe"></i>French</a
                     >
                 </li>
                 <li>
