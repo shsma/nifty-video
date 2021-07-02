@@ -13,6 +13,7 @@
                         >
                     </li>
                 </ul>
+                <hr/>
             </div>
             <div style="clear: both"></div>
         </div>
