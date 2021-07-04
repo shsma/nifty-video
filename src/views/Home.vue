@@ -1,4 +1,13 @@
 <template>
+    <div>
+        <p>
+            WELCOME Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Dolor nam architecto, laudantium totam repellat quasi reprehenderit
+            earum maiores tenetur cum rem id repudiandae doloribus aut ipsa
+            facere doloremque itaque eius sint aspernatur at porro quidem? Ipsa
+            laborum illum reiciendis rerum
+        </p>
+    </div>
     <div class="home">
         <nv-trailer v-if="trailer"></nv-trailer>
         <button class="reload-movies" @click="fetchMovies">
