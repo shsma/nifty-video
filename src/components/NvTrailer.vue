@@ -57,6 +57,7 @@ export default class NvTrailer extends Vue {
     margin-right: auto;
     margin-top: 30px;
 }
+
 .trailer-actions {
     display: flex;
     align-items: center;
@@ -65,9 +66,11 @@ export default class NvTrailer extends Vue {
     margin: 2rem 0;
     justify-content: center;
 }
+
 .trailer-actions div {
     margin-right: 1rem;
 }
+
 .trailer-button button {
     padding: 0.5rem;
     border: 2px solid #a9a9ce;
@@ -76,6 +79,7 @@ export default class NvTrailer extends Vue {
     cursor: pointer;
     border-radius: 4px;
 }
+
 .close button {
     color: #ff5858;
     border: 2px solid #ff5858;

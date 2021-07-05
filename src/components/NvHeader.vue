@@ -25,7 +25,7 @@
             <br />
             <h3>
                 We help you Discover, organize and track over our delicately
-                selected recommandation.
+                selected recommendation.
             </h3>
         </div>
         <br />

@@ -1,12 +1,10 @@
 <template>
-    <div>
-        <!--        <p>-->
-        <!--            WELCOME Lorem, ipsum dolor sit amet consectetur adipisicing elit.-->
-        <!--            Dolor nam architecto, laudantium totam repellat quasi reprehenderit-->
-        <!--            earum maiores tenetur cum rem id repudiandae doloribus aut ipsa-->
-        <!--            facere doloremque itaque eius sint aspernatur at porro quidem? Ipsa-->
-        <!--            laborum illum reiciendis rerum-->
-        <!--        </p>-->
+    <div class="intro">
+        <h2 class="group-title">WHAT MOVIE SHOULD I WATCH TONIGHT?</h2>
+        <p>
+            Discover the best new releases and artsy classics for whatever your
+            mood. press RELOAD and discover our movie recommendations.
+        </p>
     </div>
     <div class="home">
         <nv-trailer v-if="trailer"></nv-trailer>
@@ -61,6 +59,17 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+    <div class="intro">
+        <h2 class="group-title">FOUND OUR RECOMMENDATIONS HELPFUL ?</h2>
+        <p>
+            Follow NIFTY.VIDEO on social media for regular movie
+            recommendations.
+        </p>
+        <div class="actions">
+            <a href="#" target="_blank" class="twitter-button">Twitter</a>
+            <a href="#" target="_blank" class="facebook-button">Facebook</a>
         </div>
     </div>
 </template>
