@@ -208,7 +208,7 @@ h4 {
     font-weight: 700 !important;
     background: none;
     border: none;
-    letter-spacing: 7px;
+    letter-spacing: 4px;
     -webkit-box-shadow: 0 5px 40px -10px rgba(0, 0, 0, 0.67);
     -moz-box-shadow: 0 5px 40px -10px rgba(0, 0, 0, 0.67);
     transition: all 0.3s ease 0s;
@@ -223,4 +223,9 @@ h4 {
     -webkit-box-shadow: 0 5px 40px -10px rgba(0, 0, 0, 0.67);
     -moz-box-shadow: 0 5px 40px -10px rgba(0, 0, 0, 0.67);
     transition: all 0.3s ease 0s;
+}
+
+.actions i {
+    padding-right: 10px;
+    font-size: 14px;
 }

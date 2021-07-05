@@ -68,8 +68,12 @@
             recommendations.
         </p>
         <div class="actions">
-            <a href="#" target="_blank" class="twitter-button">Twitter</a>
-            <a href="#" target="_blank" class="facebook-button">Facebook</a>
+            <a href="#" target="_blank" class="twitter-button">
+                <i class="fab fa-twitter"></i>Twitter</a
+            >
+            <a href="#" target="_blank" class="facebook-button"
+                ><i class="fab fa-facebook-f"></i>Facebook</a
+            >
         </div>
     </div>
 </template>
