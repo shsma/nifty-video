@@ -2,7 +2,7 @@
 
 ### Highlights
 ```angular2html
-You can use this Repo as a template for you project.
+You can use this Repo as a template for your project.
 Don't hesitate to hit the star button if you find it useful.
 ```
 ```angular2html
