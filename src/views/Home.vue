@@ -1,4 +1,11 @@
 <template>
+    <div class="intro">
+        <h2 class="group-title">WHAT MOVIE SHOULD I WATCH TONIGHT?</h2>
+        <p>
+            Discover the best new releases and artsy classics for whatever your
+            mood. press RELOAD and discover our movie recommendations.
+        </p>
+    </div>
     <div class="home">
         <nv-trailer v-if="trailer"></nv-trailer>
         <button class="reload-movies" @click="fetchMovies">
@@ -52,6 +59,21 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+    <div class="intro">
+        <h2 class="group-title">FOUND OUR RECOMMENDATIONS HELPFUL ?</h2>
+        <p>
+            Follow NIFTY.VIDEO on social media for regular movie
+            recommendations.
+        </p>
+        <div class="actions">
+            <a href="#" target="_blank" class="twitter-button">
+                <i class="fab fa-twitter"></i>Twitter</a
+            >
+            <a href="#" target="_blank" class="facebook-button"
+                ><i class="fab fa-facebook-f"></i>Facebook</a
+            >
         </div>
     </div>
 </template>

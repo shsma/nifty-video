@@ -6,7 +6,13 @@
             </div>
             <ul class="useful">
                 <li><a href="#" class="menu">About</a></li>
+
                 <li><a href="#" class="menu">Contact</a></li>
+                <li>
+                    <a href="#" class="menu"
+                        ><i class="fas fa-globe"></i>French</a
+                    >
+                </li>
                 <li>
                     <a href="#"> <i class="fa fa-user"></i> Sign in</a>
                 </li>
@@ -15,13 +21,16 @@
     </header>
     <section>
         <div class="tag_line">
-            <h2>The best suggestion of movies to watch</h2>
+            <h2>Wondering what to watch Tonight ?</h2>
             <br />
-            <h3>Are in <span>Here</span></h3>
+            <h3>
+                We help you Discover, organize and track over our delicately
+                selected recommendation.
+            </h3>
         </div>
         <br />
-        <button class="btn-i"><i class="fas fa-chevron-down"></i></button>
-        <!--        <button class="reload-movies" @click="fetchMovies">Reload</button>-->
+        <!--        <button class="btn-i"><i class="fas fa-chevron-down"></i></button>-->
+        <!--        &lt;!&ndash;        <button class="reload-movies" @click="fetchMovies">Reload</button>&ndash;&gt;-->
     </section>
 </template>
 

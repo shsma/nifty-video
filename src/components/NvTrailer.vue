@@ -1,5 +1,11 @@
 <template>
-    <iframe width="1080" height="720" :src="trailerSrc()"> </iframe>
+    <iframe
+        class="trailer-container"
+        width="1080"
+        height="720"
+        :src="trailerSrc()"
+    >
+    </iframe>
     <div class="trailer-actions">
         <div class="trailer-button" @click="previousTrailer">
             <button>Previous Trailer</button>
@@ -44,28 +50,4 @@ export default class NvTrailer extends Vue {
     }
 }
 </script>
-<style>
-.trailer-actions {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    text-align: center;
-    margin: 2rem 0;
-    justify-content: center;
-}
-.trailer-actions div {
-    margin-right: 1rem;
-}
-.trailer-button button {
-    padding: 0.5rem;
-    border: 2px solid #a9a9ce;
-    color: #575786;
-    font-weight: 500;
-    cursor: pointer;
-    border-radius: 4px;
-}
-.close button {
-    color: #ff5858;
-    border: 2px solid #ff5858;
-}
-</style>
+<style></style>
